@@ -20,9 +20,9 @@
 
  - https://coolors.co/ffbf00-e83f6f-2274a5-32936f-ffffff
 
-* Title (with link to live Demo)
+* Title: Crypto News https://encryptonews.netlify.app/
 
-* Overview (description of your app)
+* Overview
 
 This site is our front end project for our cohort. Our group decided to focus on Crypto currency. With all the market swings and uptick in news coverage we figured it would be a great idea to have a one stop shop site for leading Blockchain news and education on market current conditions. With the rapid pace of growth, more and more people are interested in learning more, learning positives, learning negatives or just staying up to date with current events in this ever changing market. Encrypto is designed to give you all of this. 
 
