@@ -1,5 +1,6 @@
 1. Purpose of the app/website that we are building
-- EnCrypto is a provider of financial tech, blockchain, and crypto news. We bring you the latest information and analysis on the future of money
+
+    EnCrypto is a provider of financial tech, blockchain, and crypto news. We bring you the latest information and analysis on the future of money
 
 
 2. Layout and user functionality 
@@ -18,24 +19,26 @@
 
 4. Color schemes 
 
- - https://coolors.co/ffbf00-e83f6f-2274a5-32936f-ffffff
+    - https://coolors.co/ffbf00-e83f6f-2274a5-32936f-ffffff
 
-* Title: Crypto News https://encryptonews.netlify.app/
+5. Title: Crypto News
 
-* Overview
+    - https://encryptonews.netlify.app/
 
-This site is our front end project for our cohort. Our group decided to focus on Crypto currency. With all the market swings and uptick in news coverage we figured it would be a great idea to have a one stop shop site for leading Blockchain news and education on market current conditions. With the rapid pace of growth, more and more people are interested in learning more, learning positives, learning negatives or just staying up to date with current events in this ever changing market. Encrypto is designed to give you all of this. 
+6. Overview
 
-* Screen Shot of App
+    This site is our front end project for our cohort. Our group decided to focus on Crypto currency. With all the market swings and uptick in news coverage we figured it would be a great idea to have a one stop shop site for leading Blockchain news and education on market current conditions. With the rapid pace of growth, more and more people are interested in learning more, learning positives, learning negatives or just staying up to date with current events in this ever changing market. Encrypto is designed to give you all of this. 
+
+7. Screen Shot of App
     * ![](./images/lastshot.jpg)
 
 
-* Tech Stack
+8. Tech Stack
     * Languages: CSS, JS, HTML
     * APIs: 1 from cryptonews-api.com, 1 chart widget from tradingview.com, 1 chart widget from cryptohopper.com
     * Other: AJAX, JSON, Photoshop, Postman  
 
-* MVP
+9. MVP
     * Provide the following
     - Pull and display API data : Breaking News /done 
     - Filter by video:  done 
@@ -45,59 +48,59 @@ This site is our front end project for our cohort. Our group decided to focus on
     
     
 
-* Stretch Goals (Completed)
+10. Stretch Goals (Completed)
     - Pull and display API data : Breaking News /done 
     - Filter by video:  done 
     - Filter by ticker symbols and display: done 
     - Build out all pages with buttons: done  
     - All buttons working and navigates to designated page: done 
 
-* Stretch Goals (Future)
+    * Stretch Goals (Future)
     N/A
 
-* Code Snippets (show some impressive code)
+11. Code Snippets (show some impressive code)
     * This is the code to fetch ticker symbol, Listening for the menu selection, Store the ticker symbol in local storage, open results page onLoad(), display results. Change color of sentiment based on the value (neutral, positive, negative)
 
 
-const newsMenu = document.querySelector('.dropdown-menu');
-const sentimentMenu = document.querySelector('.sentiment-menu');
-newsMenu.addEventListener("click", e => {
-    e.preventDefault();
-    if(e.target.id === "BTC" || e.target.id === "ETH" || e.target.id ==="XRP"){
-        localStorage.symbol = e.target.id; 
-        window.location.href = "results.html"
-    }
-})
-function displaySymbol(){
-    
-    let symbol = localStorage.symbol;
-    // if(localStorage.symbol == undefined || localStorage == null ? "BTC" : localStorage.symbol)
-    let urlSymbol = `https://cryptonews-api.com/api/v1?tickers=${symbol}&items=50&token=${APIKEY}`;
+            const newsMenu = document.querySelector('.dropdown-menu');
+            const sentimentMenu = document.querySelector('.sentiment-menu');
+            newsMenu.addEventListener("click", e => {
+                e.preventDefault();
+                if(e.target.id === "BTC" || e.target.id === "ETH" || e.target.id ==="XRP"){
+                    localStorage.symbol = e.target.id; 
+                    window.location.href = "results.html"
+                }
+            })
+            function displaySymbol(){
 
-    fetch(urlSymbol)
-    .then(apiData1 => apiData1.json())
-    .then(symbolData => {
+                let symbol = localStorage.symbol;
+                // if(localStorage.symbol == undefined || localStorage == null ? "BTC" : localStorage.symbol)
+                let urlSymbol = `https://cryptonews-api.com/api/v1?tickers=${symbol}&items=50&token=${APIKEY}`;
 
-        symbolArray = symbolData;
-        // console.log(`This is symbolArray`);
-        // console.log(symbolArray.data.length);
-        
-        let fontColorTitle = "";
-        let fontColor = "";
-        let fontSize = "18px";
-        let fontSize1 = "18px";
-        let count = 0;
+                fetch(urlSymbol)
+                .then(apiData1 => apiData1.json())
+                .then(symbolData => {
 
-        while(count < symbolArray.data.length){
-            let sentimentColor = "goldenrod"
-            if(symbolArray.data[count].sentiment == "Positive"){
-                sentimentColor = "dodgerblue";
-            }
-            else if(symbolArray.data[count].sentiment == "Negative"){
-                sentimentColor = "red";
-            }
+                    symbolArray = symbolData;
+                    // console.log(`This is symbolArray`);
+                    // console.log(symbolArray.data.length);
 
-* Screenshots Our App
+                    let fontColorTitle = "";
+                    let fontColor = "";
+                    let fontSize = "18px";
+                    let fontSize1 = "18px";
+                    let count = 0;
+
+                    while(count < symbolArray.data.length){
+                        let sentimentColor = "goldenrod"
+                        if(symbolArray.data[count].sentiment == "Positive"){
+                            sentimentColor = "dodgerblue";
+                        }
+                        else if(symbolArray.data[count].sentiment == "Negative"){
+                            sentimentColor = "red";
+                        }
+
+12. Screenshots Our App
 
     *  planning phase for site layout 
     * ![](./images/abstractbackground.jpg)
@@ -105,7 +108,7 @@ function displaySymbol(){
     * ![](./images/blackwhitedots.jpeg)
     * ![](./images/finalbg.jpg)
 
-* Logo Drafts
+13. Logo Drafts
 
     * ![](./images/goat.jpg)
     * ![](./images/goatBG1.jpg)
@@ -113,7 +116,7 @@ function displaySymbol(){
     * ![](./images/goatlogo.jpg)
     * ![](./images/mygoat.jpg)
 
-* Site Layout 
+14. Site Layout 
 
     * ![](./images/firstdraft.jpg)
     * ![](./images/seconddraft.jpg)
@@ -121,7 +124,7 @@ function displaySymbol(){
     * 
 
 
-* Developer Team
+15. Developer Team
     * Andrena Alexandre
     * https://github.com/AndrenaAlexandre
     * Design, User Functionality & UX, UI
@@ -142,7 +145,7 @@ function displaySymbol(){
     * Design, User functionality, Quality Assurance & UX, UI
     * Css, Js, Html,
 
-* Resources
+16. Resources
 
     * Api & Widget Sites
     - Api website
